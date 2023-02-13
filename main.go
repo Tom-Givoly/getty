@@ -11,15 +11,15 @@ import (
 
 	"github.com/codegangsta/cli"
 
-	"github.com/yudai/gotty/backend/localcommand"
-	"github.com/yudai/gotty/pkg/homedir"
-	"github.com/yudai/gotty/server"
-	"github.com/yudai/gotty/utils"
+	"github.com/Tom-Givoly/getty/backend/localcommand"
+	"github.com/Tom-Givoly/getty/pkg/homedir"
+	"github.com/Tom-Givoly/getty/server"
+	"github.com/Tom-Givoly/getty/utils"
 )
 
 func main() {
 	app := cli.NewApp()
-	app.Name = "gotty"
+	app.Name = "getty"
 	app.Version = Version + "+" + CommitID
 	app.Usage = "Share your terminal as a web application"
 	app.HideHelp = true
