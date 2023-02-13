@@ -1,4 +1,4 @@
-module getty
+module github.com/Tom-Givoly/getty
 
 go 1.20
 
@@ -13,5 +13,3 @@ require (
 	github.com/pkg/errors v0.8.1-0.20161029093637-248dadf4e906
 	github.com/yudai/hcl v0.0.0-20151013225006-5fa2393b3552
 )
-
-require github.com/Tom-Givoly/getty v0.0.0-20230211160722-c2a62835329a // indirect

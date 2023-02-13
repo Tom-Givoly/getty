@@ -20,10 +20,28 @@ import (
 func main() {
 	app := cli.NewApp()
 	app.Name = "getty"
-	app.Version = Version + "+" + CommitID
+	//app.Version = Version + "+" + CommitID
+	app.Version = "v0.0.1" + "+" + "1905789"
 	app.Usage = "Share your terminal as a web application"
 	app.HideHelp = true
-	cli.AppHelpTemplate = helpTemplate
+	//cli.AppHelpTemplate = helpTemplate
+	cli.AppHelpTemplate = `NAME:
+   {{.Name}} - {{.Usage}}
+
+USAGE:
+   {{.Name}} [options] <command> [<arguments...>]
+
+VERSION:
+   {{.Version}}{{if or .Author .Email}}
+
+AUTHOR:{{if .Author}}
+  {{.Author}}{{if .Email}} - <{{.Email}}>{{end}}{{else}}
+  {{.Email}}{{end}}{{end}}
+
+OPTIONS:
+   {{range .Flags}}{{.}}
+   {{end}}
+`
 
 	appOptions := &server.Options{}
 	if err := utils.ApplyDefaultValues(appOptions); err != nil {
